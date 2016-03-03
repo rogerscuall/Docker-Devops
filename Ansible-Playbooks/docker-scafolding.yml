@@ -4,7 +4,7 @@
   gather_facts: no
   tasks:
     - name: Create all the directories
-      file: path=~/Projects/{{ item }} state=directory mode=0644
+      file: path=~/Docker/Projects/{{ item }} state=directory mode=0644
       with_items:
         - MobyDock/mobydock/mobydock
         - MobyDock/mobydock/config
