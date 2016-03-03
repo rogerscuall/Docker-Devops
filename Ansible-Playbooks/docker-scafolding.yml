@@ -39,4 +39,4 @@
     - name: Download the Docker image
       get_url:
         url: http://doc.rultor.com/images/docker-logo.png
-        dest: {{ base_dir }}/mobydock/static/docker-logo.png
+        dest: "{{ base_dir }}/mobydock/static/docker-logo.png"
