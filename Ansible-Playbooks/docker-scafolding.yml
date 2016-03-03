@@ -1,5 +1,5 @@
 ---
-- name: Project scafolding lecture 23
+- name: Project scafolding lecture 22 and 23
   hosts: localhost
   gather_facts: no
   #become: yes
