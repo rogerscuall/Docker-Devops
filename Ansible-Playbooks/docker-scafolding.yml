@@ -1,5 +1,5 @@
 ---
-- name: Project scafolding lecture 23
+- name: Project scafolding lecture 23 
   hosts: localhost
   gather_facts: no
   tasks:
