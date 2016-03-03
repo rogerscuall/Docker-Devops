@@ -10,7 +10,7 @@
         - mobydock
         - config
         - instance
-        - mobydock/template
+        - mobydock/templates
         - mobydock/static
 
 
