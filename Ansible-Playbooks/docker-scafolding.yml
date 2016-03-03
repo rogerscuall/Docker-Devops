@@ -32,8 +32,8 @@
         - instance/settings.py_production_example
         - mobydock/app.py
         - mobydock/__init__.py
-        - templates/layout.html
-        - static/main.css
+        - mobydock/templates/layout.html
+        - mobydock/static/main.css
 
     - name: Download the Docker image
       get_url:
