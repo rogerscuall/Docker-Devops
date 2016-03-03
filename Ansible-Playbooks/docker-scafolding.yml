@@ -11,6 +11,7 @@
         - MobyDock/mobydock/instance
         - MobyDock/mobydock/mobydock/template
         - MobyDock/mobydock/mobydock/static
+      become: yes
 
 
     - name: Create the files in mobydock
