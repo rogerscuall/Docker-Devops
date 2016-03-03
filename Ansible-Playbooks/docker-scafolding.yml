@@ -1,7 +1,8 @@
 ---
-- name: Project scafolding lecture 23 
+- name: Project scafolding lecture 23
   hosts: localhost
   gather_facts: no
+  become: yes
   tasks:
     - name: Create all the directories
       file: path=~/Docker/Projects/{{ item }} state=directory mode=0644
@@ -11,8 +12,6 @@
         - MobyDock/mobydock/instance
         - MobyDock/mobydock/mobydock/template
         - MobyDock/mobydock/mobydock/static
-      become: yes
-
 
     - name: Create the files in mobydock
       file: path=~/Projects/MobyDock/mobydock/{{ item }} state=touch
