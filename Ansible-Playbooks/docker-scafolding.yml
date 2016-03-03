@@ -2,10 +2,11 @@
 - name: Project scafolding lecture 22 and 23
   hosts: localhost
   gather_facts: no
-  #become: yes
+  vars:
+    - base_dir: ~/Docker/Projects/MobyDock/mobydock
   tasks:
     - name: Create all the directories
-      file: path=~/Docker/Projects/MobyDock/mobydock/{{ item }} state=directory
+      file: path={{ base_dir }}/{{ item }} state=directory
       with_items:
         - mobydock
         - config
@@ -15,7 +16,7 @@
 
 
     - name: Create the files in mobydock
-      file: path=~/Docker/Projects/MobyDock/mobydock/{{ item }} state=touch
+      file: path={{ base_dir }}/{{ item }} state=touch
       with_items:
         - requirements.txt
         - .gitignore
@@ -24,7 +25,7 @@
         - .dockerignore
 
     - name: Create files in directories inside mobydock
-      file: path=~/Docker/Projects/MobyDock/mobydock/{{ item }} state=touch
+      file: path={{ base_dir }}/{{ item }} state=touch
       with_items:
         - config/__init__.py
         - config/setting.py
@@ -38,4 +39,4 @@
     - name: Download the Docker image
       get_url:
         url: http://doc.rultor.com/images/docker-logo.png
-        dest: ~/Docker/Projects/MobyDock/mobydock/mobydock/static/docker-logo.png
+        dest: {{ base_dir }}/mobydock/static/docker-logo.png
