@@ -5,13 +5,14 @@
   #become: yes
   tasks:
     - name: Create all the directories
-      file: path=~/Docker/Projects/{{ item }} state=directory mode=0644
+      file: path=~/Docker/Projects/MobyDock/mobydock/{{ item }} state=directory
       with_items:
-        - MobyDock/mobydock/mobydock
-        - MobyDock/mobydock/config
-        - MobyDock/mobydock/instance
-        - MobyDock/mobydock/mobydock/template
-        - MobyDock/mobydock/mobydock/static
+        - mobydock
+        - config
+        - instance
+        - mobydock/template
+        - mobydock/static
+
 
     - name: Create the files in mobydock
       file: path=~/Projects/MobyDock/mobydock/{{ item }} state=touch
